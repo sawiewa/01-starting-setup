@@ -1,6 +1,6 @@
 import './ExpenseItem.css';
 import ExpenseDate from './ExpenseDate';
-import Card from './Card';
+import Card from '../UI/Card';
 function ExpenseItem(props) {
 	//zamiast props można napisać w {} konkretne parametry czyli np. tutle, date, amount i potem nie pisać props.amount tylko poprostu amount
 
