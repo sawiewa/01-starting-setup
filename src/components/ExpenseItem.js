@@ -1,14 +1,18 @@
 import './ExpenseItem.css';
+import ExpenseDate from './ExpenseDate';
+import Card from './Card';
 function ExpenseItem(props) {
+	//zamiast props można napisać w {} konkretne parametry czyli np. tutle, date, amount i potem nie pisać props.amount tylko poprostu amount
 
 	return (
-		<div className='expense-item'>
-			<div>{props.date.toISOString()}</div>
+		<Card className='expense-item'>
+			<ExpenseDate date={props.date}></ExpenseDate>
+			{/* <div>{props.date.toISOString()}</div> */}
 			<div className='expense-item__description'>
 				<h2>{props.title}</h2>
 			</div>
 			<div className='expense-item__price'>{props.amount}</div>
-		</div>
+		</Card>
 	);
 }
 
