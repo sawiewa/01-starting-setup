@@ -29,10 +29,14 @@ const App = () => {
 			date: new Date(2023, 5, 18),
 		},
 	];
+	const addExpenseHandler = (expense) => {
+		console.log('z aplikacji App.js');
+		console.log(expense);
+	};
 
 	return (
 		<div>
-			<NewExpense></NewExpense>
+			<NewExpense onAddExpense={addExpenseHandler}></NewExpense> {/*przekazujemy dane z komponentu NewExpenses*/}
 			<Expenses items={expenses}></Expenses>
 		</div>
 	);
